@@ -1,4 +1,7 @@
+import java.text.DateFormat;
+import java.text.Format;
 import java.util.Date;
+
 
 public class AlfredQuotes {
     
@@ -8,18 +11,27 @@ public class AlfredQuotes {
     }
     
     public String guestGreeting(String name) {
-        // YOUR CODE HERE
-        return "place holder for guest greeting return string";
+
+        return "Hello," + name + " Lovely to see you.";
     }
     
     public String dateAnnouncement() {
-        // YOUR CODE HERE
-        return "place holder for date announcement return string";
+        Date date = new Date();
+        return "It is currently " + date;
     }
     
     public String respondBeforeAlexis(String conversation) {
-        // YOUR CODE HERE
-        return "for snarky response return string";
+        int a = conversation.indexOf("Alexis");
+        int b = conversation.indexOf("Alfred");
+        if(a != -1){
+            return "Right away, sir. She certainly isn't sophisticated enough for that.";
+        }
+        else if (b != -1){
+            return "At your service. As you wish, naturally.";
+        }
+        else{
+            return "Right. And with that I shall retire.";
+        }
     }
     
 	// NINJA BONUS
@@ -27,4 +39,9 @@ public class AlfredQuotes {
     // SENSEI BONUS
     // Write your own AlfredQuote method using any of the String methods you have learned!
 }
+// String ninja = "Welcome to Coding Dojo!";
+// int a = ninja.indexOf("Coding"); // a is 11
+// int b = ninja.indexOf("co"); // b is 3
+// int c = ninja.indexOf("pizza"); // c is -1, "pizza" is not found
+
 
